@@ -11,12 +11,12 @@
 <nav><a class="brand" href="./">釣り手帳<small>TSURI TECHO</small></a><div class="nav-links"><a href="./">アプリ</a><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a></div></nav>
 <main>
 <h1>プライバシーポリシー</h1>
-<p>最終更新日：2026-11-07</p>
+<p>最終更新日：2026-11-08</p>
 
 <section>
 <p>Easpe（以下「開発者」）は、スマートフォン用アプリ「釣り手帳」（以下「本アプリ」）での情報の扱いを、次のとおり定めます。</p>
 <h2>1. 基本の方針</h2>
-<p>本アプリには、開発者が運用するアカウントやサーバーはありません。記録した内容（ギア、セット、予定、釣行、メモ、写真、位置など）は、お使いの端末の中に保存されます。開発者がこれらの情報を受け取ったり、見たりすることはありません。本アプリに広告や利用状況の解析（アナリティクス）の仕組みは入っていません。</p>
+<p>本アプリには、開発者が運用するアカウントはありません。記録した内容（ギア、セット、予定、釣行、メモ、写真、位置など）は、お使いの端末の中に保存されます。開発者がこれらの記録を受け取ったり、見たりすることはありません。無料のプランでは、一覧と履歴の画面に Google AdMob の広告を表示します（有料のプランでは表示しません）。開発者が独自に利用状況を解析（アナリティクス）する仕組みは入っていません。</p>
 
 <h2>2. 端末の中に保存する情報</h2>
 <div class="table-wrap"><table>
@@ -25,24 +25,29 @@
 <tr><td>ギア・消耗品・セット・予定・釣行の記録とメモ</td><td>状態の確認、実績の記録</td></tr>
 <tr><td>写真（撮影したもの、選んだもの）</td><td>ギア・消耗品・釣果の記録</td></tr>
 <tr><td>位置（現在地、ポイント、写真に含まれる位置）</td><td>釣り場やポイントの記録、天気・波・潮の取得</td></tr>
+<tr><td>プランの権利（無料・Plus・Pro、期限、試用の有無、中継が発行した権利のトークン、ストアの購入トークン）、端末で作った識別子（UUID）、文字認識の今月の回数</td><td>プランの機能を、つながっていないときも期限まで使えるようにするため</td></tr>
 </tbody></table></div>
 <p>位置は、利用者が1タップしたとき、ポイントを登録したとき、写真の位置を候補にするときだけ使います。アプリを使っていないときに位置を取ることはありません。</p>
-<p>本アプリを削除すると、これらの情報は端末から消えます。バックアップを書き出したときは、利用者が選んだ保存先にファイルができ、その扱いは保存先のサービスの規約によります。Android の端末のバックアップ（Google アカウントへのバックアップ）が有効なときは、本アプリのデータも端末の設定に従ってバックアップされることがあります。このバックアップも開発者は受け取りません。</p>
+<p>本アプリを削除すると、これらの情報は端末から消えます。バックアップを書き出したときは、利用者が選んだ保存先にファイルができ、その扱いは保存先のサービスの規約によります。Android の端末のバックアップ（Google アカウントへのバックアップ）が有効なときは、本アプリの記録（データベース）が端末の設定に従ってバックアップされます。写真はこのバックアップに含めません（写真は「バックアップを書き出す」で保存してください）。このバックアップも開発者は受け取りません。</p>
 
 <h2>3. 端末の外に送る情報</h2>
-<p>本アプリは、次の機能のために外部のサービスに接続します。どの通信でも、お使いの端末の IP アドレスが接続先に届きます。開発者は、これらの通信の内容を受け取りません。</p>
+<p>本アプリは、次の機能のために外部のサービスに接続します。どの通信でも、お使いの端末の IP アドレスが接続先に届きます。開発者が運用するのは「天気の中継」だけで、ほかの通信の内容を開発者は受け取りません。</p>
 <div class="table-wrap"><table>
 <thead><tr><th>接続先</th><th>送る情報</th><th>目的</th></tr></thead>
 <tbody>
-<tr><td>Open-Meteo（open-meteo.com）</td><td>釣行・ポイントの緯度経度と日付</td><td>天気・風・波・海面の高さの取得</td></tr>
+<tr><td>天気の中継（開発者が Amazon Web Services 上で運用）</td><td>Pro のときだけ：釣行・ポイントの緯度経度と日付、権利のトークン。購入の確認のとき：ストアの購入トークン、商品の種類、端末で作った識別子</td><td>Open-Meteo の天気・風・波・海面の高さの取得（中継が Open-Meteo に問い合わせます）、購入の確認（中継が Google Play・App Store に問い合わせます）。中継は緯度経度や購入の情報を保存しません。回数の上限のために、識別子の要約（ハッシュ）と時刻を 48 時間だけ記録します</td></tr>
+<tr><td>Open-Meteo（open-meteo.com、中継を通して）</td><td>釣行・ポイントの緯度経度と日付（中継から送ります。端末の IP アドレスは届きません）</td><td>天気・風・波・海面の高さの取得</td></tr>
+<tr><td>Google Play・App Store</td><td>購入の手続きに必要な情報（各ストアが処理します。支払いの情報を開発者は受け取りません）</td><td>プランの購入・更新・復元</td></tr>
+<tr><td>Google（AdMob、無料のプランのとき）</td><td>広告 ID、端末とアプリの情報、おおよその位置（IP アドレスから）、広告の表示と操作</td><td>広告の表示、広告の効果の測定、不正の防止。欧州などでは、表示の前に同意をうかがいます（設定 → 広告の同意を変える）</td></tr>
 <tr><td>気象庁（www.data.jma.go.jp）</td><td>潮位表の地点と年（位置は送りません）</td><td>潮位表の取得</td></tr>
-<tr><td>OpenStreetMap のタイルサーバー（tile.openstreetmap.org）</td><td>表示する地図の範囲</td><td>地図の表示</td></tr>
+<tr><td>国土地理院の地理院タイル（cyberjapandata.gsi.go.jp）</td><td>表示する地図の範囲（日本の中）</td><td>地図の表示</td></tr>
+<tr><td>OpenStreetMap のタイルサーバー（tile.openstreetmap.org）</td><td>表示する地図の範囲（日本の外）</td><td>地図の表示</td></tr>
 <tr><td>Google（ML Kit）</td><td>端末の機種・OS、アプリのバージョン、処理時間・エラーなどの診断の情報（写真や読み取った文字は送りません）</td><td>端末の中での文字認識</td></tr>
 </tbody></table></div>
-<p>各サービスでの情報の扱いは、それぞれの規約・プライバシーポリシーをご覧ください：<a href="https://open-meteo.com/en/terms">Open-Meteo</a>、<a href="https://www.jma.go.jp/jma/kishou/info/coment.html">気象庁</a>、<a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a>、<a href="https://policies.google.com/privacy">Google</a>。接続先を変えたときは、このページを更新します。</p>
+<p>各サービスでの情報の扱いは、それぞれの規約・プライバシーポリシーをご覧ください：<a href="https://open-meteo.com/en/terms">Open-Meteo</a>、<a href="https://www.jma.go.jp/jma/kishou/info/coment.html">気象庁</a>、<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html">国土地理院</a>、<a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a>、<a href="https://policies.google.com/privacy">Google</a>（広告：<a href="https://policies.google.com/technologies/ads">Google の広告について</a>）、<a href="https://aws.amazon.com/privacy/">Amazon Web Services</a>、<a href="https://www.apple.com/legal/privacy/">Apple</a>。接続先を変えたときは、このページを更新します。</p>
 
 <h2>4. 第三者への提供</h2>
-<p>開発者は情報を受け取らないため、第三者に提供することはありません。</p>
+<p>開発者は、上の「天気の中継」で受け取る情報を、天気の取得と購入の確認のためだけに使い、第三者に提供しません（中継が Open-Meteo・Google Play・App Store に問い合わせるのは、その機能のためです）。広告の情報は、Google が Google のポリシーに従って扱います。</p>
 
 <h2>5. 通知</h2>
 <p>予定の準備や片付けの記録をうながす通知は、端末の中で予約して出します。通知のために情報を外部に送ることはありません。</p>
@@ -59,19 +64,21 @@
 
 <section lang="en">
 <h2>Privacy Policy (English)</h2>
-<p>Last updated: 2026-11-07</p>
+<p>Last updated: 2026-11-08</p>
 <ul>
-<li>Tsuri Techo has no developer-operated account or server. Everything you record (gear, plans, trips, notes, photos and locations) stays on your device, and Easpe never receives it. The app has no ads and no analytics.</li>
+<li>Tsuri Techo has no developer-operated account or server. Everything you record (gear, plans, trips, notes, photos and locations) stays on your device, and Easpe never receives it. On the free plan, the app shows Google AdMob banner ads on list and history screens (none on paid plans). Easpe runs no analytics of its own.</li>
 <li>The app connects to these services, and each one receives your device's IP address:
 <ul>
-<li>Open-Meteo receives the latitude, longitude and date of a trip or spot, to fetch weather, wind, waves and sea level.</li>
+<li>The weather relay run by Easpe on Amazon Web Services receives, on the Pro plan only, the latitude, longitude and date of a trip or spot plus an entitlement token, and forwards the query to Open-Meteo for weather, wind, waves and sea level. When a purchase is verified it receives the store purchase token, product and a random device identifier, and checks them with Google Play or the App Store. The relay stores none of this; for rate limiting it keeps a hash of the identifier and a timestamp for 48 hours.</li>
+<li>Google Play and the App Store process purchases, renewals and restores. Easpe never receives payment details.</li>
+<li>Google AdMob (free plan only) receives the advertising ID, device and app information, approximate location from the IP address, and ad interactions, to serve and measure ads and prevent fraud. Where required (e.g. the EEA) the app asks for consent first.</li>
 <li>The Japan Meteorological Agency receives the tide station and year (no location), to fetch tide tables.</li>
-<li>The OpenStreetMap tile servers receive the map area being shown.</li>
+<li>The GSI (Geospatial Information Authority of Japan) tile server receives the map area shown inside Japan; the OpenStreetMap tile servers receive the map area shown elsewhere.</li>
 <li>Google ML Kit receives the device model, OS, app version, latency and error codes, for on-device text recognition diagnostics. No photos or recognised text are sent.</li>
 </ul></li>
 <li>Location is used only while the app is in use: when you tap to record it, register a spot, or use a photo's location.</li>
-<li>Nothing is shared with third parties.</li>
-<li>Uninstalling the app deletes its data. Backups go only where you choose to save them. If Android device backup to your Google account is on, the app's data may be included according to your device settings, and Easpe does not receive it.</li>
+<li>Easpe uses relay data only for weather and purchase verification and does not share it with third parties. Ad data is handled by Google under its policies.</li>
+<li>Uninstalling the app deletes its data. Backups go only where you choose to save them. If Android device backup to your Google account is on, the app's records database is included according to your device settings; photos are not (export a backup to keep them). Easpe does not receive it.</li>
 <li>Contact: Easpe, <span class="mail">info@easpe.jp</span></li>
 </ul>
 </section>
