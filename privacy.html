@@ -11,12 +11,12 @@
 <nav><a class="brand" href="./">釣り手帳<small>TSURI TECHO</small></a><div class="nav-links"><a href="./">アプリ</a><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a></div></nav>
 <main>
 <h1>プライバシーポリシー</h1>
-<p>最終更新日：2026-11-08</p>
+<p>最終更新日：2026-11-09</p>
 
 <section>
 <p>Easpe（以下「開発者」）は、スマートフォン用アプリ「釣り手帳」（以下「本アプリ」）での情報の扱いを、次のとおり定めます。</p>
 <h2>1. 基本の方針</h2>
-<p>本アプリには、開発者が運用するアカウントはありません。記録した内容（ギア、セット、予定、釣行、メモ、写真、位置など）は、お使いの端末の中に保存されます。開発者がこれらの記録を受け取ったり、見たりすることはありません。無料のプランでは、一覧と履歴の画面に Google AdMob の広告を表示します（有料のプランでは表示しません）。開発者が独自に利用状況を解析（アナリティクス）する仕組みは入っていません。</p>
+<p>本アプリには、開発者が運用するアカウントはありません。記録した内容（ギア、セット、予定、釣行、メモ、写真、位置など）は、お使いの端末の中に保存されます。開発者がこれらの記録を受け取ったり、見たりすることはありません。無料のプランでは、一覧と履歴の画面に Google AdMob の広告を表示します（有料のプランでは表示しません）。開発者が独自に利用状況を解析（アナリティクス）する仕組みは入っていません。アプリと天気の中継が異常終了したときやエラーが起きたときは、原因を調べて直すために、クラッシュと診断の情報を Sentry に送ります（利用者には結びつけません。下の「3. 端末の外に送る情報」）。</p>
 
 <h2>2. 端末の中に保存する情報</h2>
 <div class="table-wrap"><table>
@@ -31,7 +31,7 @@
 <p>本アプリを削除すると、これらの情報は端末から消えます。バックアップを書き出したときは、利用者が選んだ保存先にファイルができ、その扱いは保存先のサービスの規約によります。Android の端末のバックアップ（Google アカウントへのバックアップ）が有効なときは、本アプリの記録（データベース）が端末の設定に従ってバックアップされます。写真はこのバックアップに含めません（写真は「バックアップを書き出す」で保存してください）。このバックアップも開発者は受け取りません。</p>
 
 <h2>3. 端末の外に送る情報</h2>
-<p>本アプリは、次の機能のために外部のサービスに接続します。どの通信でも、お使いの端末の IP アドレスが接続先に届きます。開発者が運用するのは「天気の中継」だけで、ほかの通信の内容を開発者は受け取りません。</p>
+<p>本アプリは、次の機能のために外部のサービスに接続します。どの通信でも、お使いの端末の IP アドレスが接続先に届きます。開発者が運用するのは「天気の中継」だけで、開発者が受け取るのは、中継に届く情報と、Sentry に送るクラッシュと診断の情報だけです。</p>
 <div class="table-wrap"><table>
 <thead><tr><th>接続先</th><th>送る情報</th><th>目的</th></tr></thead>
 <tbody>
@@ -42,12 +42,13 @@
 <tr><td>気象庁（www.data.jma.go.jp）</td><td>潮位表の地点と年（位置は送りません）</td><td>潮位表の取得</td></tr>
 <tr><td>国土地理院の地理院タイル（cyberjapandata.gsi.go.jp）</td><td>表示する地図の範囲（日本の中）</td><td>地図の表示</td></tr>
 <tr><td>OpenStreetMap のタイルサーバー（tile.openstreetmap.org）</td><td>表示する地図の範囲（日本の外）</td><td>地図の表示</td></tr>
+<tr><td>Sentry（Functional Software, Inc.、米国のサーバー。アプリと天気の中継から）</td><td>クラッシュと診断の情報：エラーの種類と、記録の中身を取り除いた説明、スタックトレース（プログラムのどこで起きたか）、端末の機種・OS、アプリのバージョン。Sentry は、送ってきた端末（中継のときは中継）の IP アドレスと、そこから推定したおおよその位置（国・市）を記録します。記録・写真・位置と緯度経度・ギアや製品の名前・入力した文字・ファイルの場所・購入トークン・権利のトークンは、送る前に取り除きます。開発者が利用者を見分ける情報（アカウント・名前・メールなど）は付けません</td><td>アプリの機能の維持と不具合の分析（クラッシュと診断の情報。利用者には結びつけません。本アプリにはアカウントがありません）。IP アドレスとおおよその位置は、クラッシュの分析（地域や回線による偏りを調べる）のためだけに使います。エラーが起きたときだけ送ります。広告や、使い方の解析には使いません。Sentry の保存期間が過ぎると消えます</td></tr>
 <tr><td>Google（ML Kit）</td><td>端末の機種・OS、アプリのバージョン、処理時間・エラーなどの診断の情報（写真や読み取った文字は送りません）</td><td>端末の中での文字認識</td></tr>
 </tbody></table></div>
-<p>各サービスでの情報の扱いは、それぞれの規約・プライバシーポリシーをご覧ください：<a href="https://open-meteo.com/en/terms">Open-Meteo</a>、<a href="https://www.jma.go.jp/jma/kishou/info/coment.html">気象庁</a>、<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html">国土地理院</a>、<a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a>、<a href="https://policies.google.com/privacy">Google</a>（広告：<a href="https://policies.google.com/technologies/ads">Google の広告について</a>）、<a href="https://aws.amazon.com/privacy/">Amazon Web Services</a>、<a href="https://www.apple.com/legal/privacy/">Apple</a>。接続先を変えたときは、このページを更新します。</p>
+<p>各サービスでの情報の扱いは、それぞれの規約・プライバシーポリシーをご覧ください：<a href="https://open-meteo.com/en/terms">Open-Meteo</a>、<a href="https://www.jma.go.jp/jma/kishou/info/coment.html">気象庁</a>、<a href="https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html">国土地理院</a>、<a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation</a>、<a href="https://policies.google.com/privacy">Google</a>（広告：<a href="https://policies.google.com/technologies/ads">Google の広告について</a>）、<a href="https://aws.amazon.com/privacy/">Amazon Web Services</a>、<a href="https://sentry.io/privacy/">Sentry</a>、<a href="https://www.apple.com/legal/privacy/">Apple</a>。接続先を変えたときは、このページを更新します。</p>
 
 <h2>4. 第三者への提供</h2>
-<p>開発者は、上の「天気の中継」で受け取る情報を、天気の取得と購入の確認のためだけに使い、第三者に提供しません（中継が Open-Meteo・Google Play・App Store に問い合わせるのは、その機能のためです）。広告の情報は、Google が Google のポリシーに従って扱います。</p>
+<p>開発者は、上の「天気の中継」で受け取る情報を、天気の取得と購入の確認のためだけに使い、第三者に提供しません（中継が Open-Meteo・Google Play・App Store に問い合わせるのは、その機能のためです）。クラッシュと診断の情報は、開発者の委託先として Sentry が保管し、不具合を直すためだけに使います。広告の情報は、Google が Google のポリシーに従って扱います。</p>
 
 <h2>5. 通知</h2>
 <p>予定の準備や片付けの記録をうながす通知は、端末の中で予約して出します。通知のために情報を外部に送ることはありません。</p>
@@ -64,9 +65,9 @@
 
 <section lang="en">
 <h2>Privacy Policy (English)</h2>
-<p>Last updated: 2026-11-08</p>
+<p>Last updated: 2026-11-09</p>
 <ul>
-<li>Tsuri Techo has no developer-operated account or server. Everything you record (gear, plans, trips, notes, photos and locations) stays on your device, and Easpe never receives it. On the free plan, the app shows Google AdMob banner ads on list and history screens (none on paid plans). Easpe runs no analytics of its own.</li>
+<li>Tsuri Techo has no developer-operated account or server. Everything you record (gear, plans, trips, notes, photos and locations) stays on your device, and Easpe never receives it. On the free plan, the app shows Google AdMob banner ads on list and history screens (none on paid plans). Easpe runs no analytics of its own. When the app or the weather relay crashes or hits an error, it sends crash and diagnostic data to Sentry, not linked to you, for app functionality and analytics of the fault (see below).</li>
 <li>The app connects to these services, and each one receives your device's IP address:
 <ul>
 <li>The weather relay run by Easpe on Amazon Web Services receives, on the Pro plan only, the latitude, longitude and date of a trip or spot plus an entitlement token, and forwards the query to Open-Meteo for weather, wind, waves and sea level. When a purchase is verified it receives the store purchase token, product and a random device identifier, and checks them with Google Play or the App Store. The relay stores none of this; for rate limiting it keeps a hash of the identifier and a timestamp for 48 hours.</li>
@@ -74,10 +75,11 @@
 <li>Google AdMob (free plan only) receives the advertising ID, device and app information, approximate location from the IP address, and ad interactions, to serve and measure ads and prevent fraud. Where required (e.g. the EEA) the app asks for consent first.</li>
 <li>The Japan Meteorological Agency receives the tide station and year (no location), to fetch tide tables.</li>
 <li>The GSI (Geospatial Information Authority of Japan) tile server receives the map area shown inside Japan; the OpenStreetMap tile servers receive the map area shown elsewhere.</li>
+<li>Sentry (Functional Software, Inc., servers in the United States) receives crash and diagnostic data from the app and the relay, only when an error occurs: the error type and a description with record contents removed, the stack trace, the device model, OS and app version. Sentry also records the sending IP address (the relay's, for relay errors) and an approximate location (country and city) derived from it, which Easpe uses only to analyse crashes. Records, photos, locations and coordinates, gear and product names, typed text, file paths, purchase tokens and entitlement tokens are removed before sending, and nothing that identifies you (account, name, email) is attached; the app has no accounts, so this data is not linked to you. Easpe uses it only to find and fix faults, never for ads or usage analytics; it is deleted when Sentry's retention period ends.</li>
 <li>Google ML Kit receives the device model, OS, app version, latency and error codes, for on-device text recognition diagnostics. No photos or recognised text are sent.</li>
 </ul></li>
 <li>Location is used only while the app is in use: when you tap to record it, register a spot, or use a photo's location.</li>
-<li>Easpe uses relay data only for weather and purchase verification and does not share it with third parties. Ad data is handled by Google under its policies.</li>
+<li>Easpe uses relay data only for weather and purchase verification and does not share it with third parties. Sentry stores crash and diagnostic data on Easpe's behalf, only for fixing faults. Ad data is handled by Google under its policies.</li>
 <li>Uninstalling the app deletes its data. Backups go only where you choose to save them. If Android device backup to your Google account is on, the app's records database is included according to your device settings; photos are not (export a backup to keep them). Easpe does not receive it.</li>
 <li>Contact: Easpe, <span class="mail">info@easpe.jp</span></li>
 </ul>
