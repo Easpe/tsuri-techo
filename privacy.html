@@ -11,7 +11,7 @@
 <nav><a class="brand" href="./">釣り手帳<small>TSURI TECHO</small></a><div class="nav-links"><a href="./">アプリ</a><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a></div></nav>
 <main>
 <h1>プライバシーポリシー</h1>
-<p>最終更新日：2026-11-09</p>
+<p>最終更新日：2026-11-10</p>
 
 <section>
 <p>Easpe（以下「開発者」）は、スマートフォン用アプリ「釣り手帳」（以下「本アプリ」）での情報の扱いを、次のとおり定めます。</p>
@@ -28,14 +28,14 @@
 <tr><td>プランの権利（無料・Plus・Pro、期限、試用の有無、中継が発行した権利のトークン、ストアの購入トークン）、端末で作った識別子（UUID）、文字認識の今月の回数</td><td>プランの機能を、つながっていないときも期限まで使えるようにするため</td></tr>
 </tbody></table></div>
 <p>位置は、利用者が1タップしたとき、ポイントを登録したとき、写真の位置を候補にするときだけ使います。アプリを使っていないときに位置を取ることはありません。</p>
-<p>本アプリを削除すると、これらの情報は端末から消えます。バックアップを書き出したときは、利用者が選んだ保存先にファイルができ、その扱いは保存先のサービスの規約によります。Android の端末のバックアップ（Google アカウントへのバックアップ）が有効なときは、本アプリの記録（データベース）が端末の設定に従ってバックアップされます。写真はこのバックアップに含めません（写真は「バックアップを書き出す」で保存してください）。このバックアップも開発者は受け取りません。</p>
+<p>本アプリを削除すると、これらの情報は端末から消えます。バックアップを書き出したとき（Plus）は、利用者が選んだ保存先に、本アプリ専用の暗号化したファイルができ、その扱いは保存先のサービスの規約によります。本アプリは、記録（データベース）の控えを端末の中にも自動で残します（最新の3つ。端末の外には送りません）。Android の端末のバックアップ（Google アカウントへのバックアップ）が有効なときは、本アプリの記録（データベース）が端末の設定に従ってバックアップされます。写真はこのバックアップに含めません（写真は「書き出してバックアップ」で保存してください）。このバックアップも開発者は受け取りません。</p>
 
 <h2>3. 端末の外に送る情報</h2>
 <p>本アプリは、次の機能のために外部のサービスに接続します。どの通信でも、お使いの端末の IP アドレスが接続先に届きます。開発者が運用するのは「天気の中継」だけで、開発者が受け取るのは、中継に届く情報と、Sentry に送るクラッシュと診断の情報だけです。</p>
 <div class="table-wrap"><table>
 <thead><tr><th>接続先</th><th>送る情報</th><th>目的</th></tr></thead>
 <tbody>
-<tr><td>天気の中継（開発者が Amazon Web Services 上で運用）</td><td>Pro のときだけ：釣行・ポイントの緯度経度と日付、権利のトークン。購入の確認のとき：ストアの購入トークン、商品の種類、端末で作った識別子</td><td>Open-Meteo の天気・風・波・海面の高さの取得（中継が Open-Meteo に問い合わせます）、購入の確認（中継が Google Play・App Store に問い合わせます）。中継は緯度経度や購入の情報を保存しません。回数の上限のために、識別子の要約（ハッシュ）と時刻を 48 時間だけ記録します</td></tr>
+<tr><td>天気の中継（開発者が Amazon Web Services の米国（オレゴン）の地域で運用）</td><td>Pro のときだけ：釣行・ポイントの緯度経度と日付、権利のトークン。購入の確認のとき：ストアの購入トークン、商品の種類、端末で作った識別子</td><td>天気・風・波・海面の高さの取得（波・海面の高さは、中継が Open-Meteo の公開データ（Amazon Web Services 上）を読みます。天気は中継が Open-Meteo に問い合わせます）、購入の確認（中継が Google Play・App Store に問い合わせます）。中継は緯度経度や購入の情報を保存しません。回数の上限のために、識別子の要約（ハッシュ）と時刻を 48 時間だけ記録します</td></tr>
 <tr><td>Open-Meteo（open-meteo.com、中継を通して）</td><td>釣行・ポイントの緯度経度と日付（中継から送ります。端末の IP アドレスは届きません）</td><td>天気・風・波・海面の高さの取得</td></tr>
 <tr><td>Google Play・App Store</td><td>購入の手続きに必要な情報（各ストアが処理します。支払いの情報を開発者は受け取りません）</td><td>プランの購入・更新・復元</td></tr>
 <tr><td>Google（AdMob、無料のプランのとき）</td><td>広告 ID、端末とアプリの情報、おおよその位置（IP アドレスから）、広告の表示と操作</td><td>広告の表示、広告の効果の測定、不正の防止。欧州などでは、表示の前に同意をうかがいます（設定 → 広告の同意を変える）。iPhone では、初めて開いたときにトラッキングの許可（App Tracking Transparency）をうかがい、許可されたときだけ広告 ID を使います。あとから iPhone の設定 → プライバシーとセキュリティ → トラッキング で変えられます</td></tr>
@@ -65,12 +65,12 @@
 
 <section lang="en">
 <h2>Privacy Policy (English)</h2>
-<p>Last updated: 2026-11-09</p>
+<p>Last updated: 2026-11-10</p>
 <ul>
 <li>Tsuri Techo has no developer-operated account or server. Everything you record (gear, plans, trips, notes, photos and locations) stays on your device, and Easpe never receives it. On the free plan, the app shows Google AdMob banner ads on list and history screens (none on paid plans). Easpe runs no analytics of its own. When the app or the weather relay crashes or hits an error, it sends crash and diagnostic data to Sentry, not linked to you, for app functionality and analytics of the fault (see below).</li>
 <li>The app connects to these services, and each one receives your device's IP address:
 <ul>
-<li>The weather relay run by Easpe on Amazon Web Services receives, on the Pro plan only, the latitude, longitude and date of a trip or spot plus an entitlement token, and forwards the query to Open-Meteo for weather, wind, waves and sea level. When a purchase is verified it receives the store purchase token, product and a random device identifier, and checks them with Google Play or the App Store. The relay stores none of this; for rate limiting it keeps a hash of the identifier and a timestamp for 48 hours.</li>
+<li>The weather relay run by Easpe on Amazon Web Services in the United States (Oregon) receives, on the Pro plan only, the latitude, longitude and date of a trip or spot plus an entitlement token, and reads Open-Meteo open data for waves and sea level, and forwards the query to Open-Meteo for weather and wind. When a purchase is verified it receives the store purchase token, product and a random device identifier, and checks them with Google Play or the App Store. The relay stores none of this; for rate limiting it keeps a hash of the identifier and a timestamp for 48 hours.</li>
 <li>Google Play and the App Store process purchases, renewals and restores. Easpe never receives payment details.</li>
 <li>Google AdMob (free plan only) receives the advertising ID, device and app information, approximate location from the IP address, and ad interactions, to serve and measure ads and prevent fraud. Where required (e.g. the EEA) the app asks for consent first.</li>
 <li>The Japan Meteorological Agency receives the tide station and year (no location), to fetch tide tables.</li>

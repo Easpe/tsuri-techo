@@ -6,3 +6,4 @@ https://easpe.github.io/tsuri-techo/ で公開する静的サイト（GitHub Pag
 - index.html：アプリの紹介
 - support.html：よくある質問と問い合わせ（info@easpe.jp）
 - privacy.html：プライバシーポリシー（日本語・English）
+- tokushoho.html：特定商取引法に基づく表記（T-934）。所在地・電話番号・責任者は「請求があれば遅滞なく開示」（特商法 11 条のただし書き）。アプリの「このアプリについて」とプランの画面から開く
